@@ -15,7 +15,7 @@ void callback(char* topic, byte* payload, unsigned int length);
 AfricasTalkingCloudClient client(sandbox, callback, _client101);
 
 void setup() {
-	WiFi.setPins(10, 3, 4);
+	WiFi.setPins(9, 3, 4);
 	Serial.begin(9600);
 	while (!Serial) {
 		;
