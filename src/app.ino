@@ -3,9 +3,9 @@
 #include <SPI.h>
 #include <WiFi101.h>
 
-char ssid[] = "AfricasTalking IoT GW";     //  your network SSID (name)
-char pass[] = "africastalking";  // your network password 
-int status = WL_IDLE_STATUS;     // the Wifi radio's status
+char ssid[] = "AfricasTalking IoT GW";     
+char pass[] = "africastalking"; 
+int status = WL_IDLE_STATUS;
 char msg[50];
 long value = 0;
 long lastMsg = 0;
@@ -16,10 +16,8 @@ AfricasTalkingCloudClient client(sandbox, callback, _client101);
 
 void setup() {
 	WiFi.setPins(9, 3, 4);
+    while (!Serial);
 	Serial.begin(9600);
-	while (!Serial) {
-		;
-	}
 	connectToWPA();
 }
 
@@ -31,7 +29,7 @@ void loop() {
 	}
 	if (!client.loop()) {
 		Serial.print("Client disconnected...");
-		if (client.connect("ATWIC1500", "PlatformIO", "<password>")) {
+		if (client.connect("ATWIC1500", "PlatformIO", "pass")) {
 			Serial.println("reconnected.");
 		}
 		else {
