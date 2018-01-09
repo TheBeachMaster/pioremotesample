@@ -3,8 +3,8 @@
 #include <SPI.h>
 #include <WiFi101.h>
 
-char ssid[] = "Thitima!";
-char pass[] = "F8Fighters!";
+char ssid[] = "Techies@WorkAgain";
+char pass[] = "ccad32da7b5d8";
 int  status = WL_IDLE_STATUS;
 char message[50];
 long value = 0, lastMessage = 0;
