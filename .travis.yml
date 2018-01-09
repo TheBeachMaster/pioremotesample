@@ -24,22 +24,22 @@
 # Template #1: General project. Test it using existing `platformio.ini`.
 #
 
- language: python
- python:
-     - "2.7"
+language: python
+python:
+   - "2.7"
 
 sudo: false 
 cache:  
     directories: 
         - "~/.platformio"
 
- install:
-     - pip install -U platformio
- script:
-    - echo "List remote devices"
-    - platformio remote device list
+install:
+      - pip install -U platformio
+script:
+        - echo "List remote devices"
+        - platformio remote device list
     # - platformio run
-    - platformio remote run --environment megaatmega2560 --target upload
+        - platformio remote run --environment megaatmega2560 --target upload
 
 #
 # Template #2: The project is intended to by used as a library with examples
