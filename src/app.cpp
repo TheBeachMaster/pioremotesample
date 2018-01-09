@@ -25,6 +25,7 @@ void setup()
     while(!Serial);
     Serial.begin(9600);
     connectToWPA();
+	Serial.println("Hey Jay");
 }
 
 void loop()
