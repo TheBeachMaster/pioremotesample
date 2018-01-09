@@ -46,6 +46,7 @@ void loop()
 	if (now - lastMessage > 5000) {
 		lastMessage = now;
 		value+=5;
+		Serial.println("Something else");
 		snprintf(message, 75, "Data #%ld", value);
 		Serial.print("Publish message: ");
 		Serial.println(message);
