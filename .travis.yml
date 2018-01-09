@@ -28,6 +28,11 @@
  python:
      - "2.7"
 
+sudo: false 
+cache:  
+    directories: 
+        - "~/.platformio"
+
  install:
      - pip install -U platformio
  script:
