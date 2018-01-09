@@ -45,7 +45,7 @@ void loop()
 	long now = millis();
 	if (now - lastMessage > 5000) {
 		lastMessage = now;
-		++value;
+		value+=5;
 		snprintf(message, 75, "Data #%ld", value);
 		Serial.print("Publish message: ");
 		Serial.println(message);
