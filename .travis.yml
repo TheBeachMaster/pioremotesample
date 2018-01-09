@@ -39,7 +39,7 @@ script:
         - echo "List remote devices"
         - platformio remote device list
     # - platformio run
-        - platformio remote run --environment megaatmega2560 --target upload
+        - platformio remote run --environment megaatmega2560 --target upload --upload-port COM15
 
 #
 # Template #2: The project is intended to by used as a library with examples
